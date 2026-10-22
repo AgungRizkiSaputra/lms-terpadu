@@ -7,5 +7,3 @@
 
 [build.environment]
   NEXT_PUBLIC_DEMO_MODE = "true"
-
-[git add .]
