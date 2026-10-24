@@ -71,14 +71,14 @@ function LoginForm() {
     <div className="w-full max-w-md">
       {/* Brand Logo & Title */}
       <div className="text-center mb-6">
-        <Link href="/" className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-blue-600 text-white shadow-lg shadow-blue-500/25 mb-3 hover:scale-105 transition-transform">
-          <School className="w-8 h-8" />
+        <Link href="/" className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-slate-900 text-white shadow-xs mb-3 hover:bg-slate-800 transition-colors">
+          <School className="w-6 h-6 text-blue-400" />
         </Link>
-        <h1 className="text-2xl font-black text-slate-900 tracking-tight">
-          LMS Sekolah Pintar
+        <h1 className="text-xl font-bold text-slate-900 tracking-tight">
+          SMA Cendekia Nusantara
         </h1>
         <p className="text-xs text-slate-500 font-medium mt-1">
-          Platform Pembelajaran Terintegrasi SMP, SMA & SMK
+          Portal Sistem Pembelajaran Terpadu • Akun Percontohan
         </p>
       </div>
 

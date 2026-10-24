@@ -17,7 +17,6 @@ import {
   PlusCircle,
   Clock,
   ArrowRight,
-  Sparkles,
 } from "lucide-react";
 
 export default function GuruDashboardPage() {
@@ -34,30 +33,35 @@ export default function GuruDashboardPage() {
       subtitle="Kelola materi pembelajaran, periksa tugas siswa, dan pantau hasil asesmen"
     >
       {/* Teacher Welcome Banner */}
-      <div className="rounded-2xl bg-linear-to-r from-emerald-600 via-teal-600 to-teal-700 p-6 text-white shadow-lg shadow-emerald-500/15 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="rounded-2xl bg-slate-900 border border-slate-800 p-6 text-white shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-5">
         <div>
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 text-white text-[11px] font-bold backdrop-blur-md mb-2">
-            <Sparkles className="w-3.5 h-3.5" />
-            Budi Santoso, S.Pd., M.Mat. (Matematika & Wali Kelas X-1)
-          </span>
-          <h2 className="text-xl font-extrabold tracking-tight">
+          <div className="flex flex-wrap items-center gap-2 mb-2.5">
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-950/80 border border-emerald-800/80 text-emerald-300 text-[11px] font-semibold">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+              Tenaga Pendidik Aktif
+            </span>
+            <span className="text-[11px] font-medium text-slate-400">
+              Budi Santoso, S.Pd., M.Mat. • Wali Kelas X-1
+            </span>
+          </div>
+          <h2 className="text-xl font-bold tracking-tight text-white">
             Ruang Kerja Pembelajaran Guru
           </h2>
-          <p className="text-xs text-emerald-100 mt-1 max-w-xl leading-relaxed">
-            Anda mengampu 2 Rombongan Belajar dengan total 69 siswa aktif semester ini.
+          <p className="text-xs text-slate-300 mt-1 max-w-xl leading-relaxed">
+            Anda mengampu 2 Rombongan Belajar dengan 69 peserta didik aktif. Kelola materi ajar terstruktur, evaluasi pengumpulan tugas, dan susun bank soal ujian CBT.
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2.5 shrink-0">
           <Link href="/guru/materi">
-            <Button variant="secondary" size="sm" className="bg-white text-emerald-700 hover:bg-emerald-50">
-              <PlusCircle className="w-3.5 h-3.5 mr-1" />
+            <Button size="sm" className="bg-white text-slate-900 hover:bg-slate-100 font-semibold shadow-xs">
+              <PlusCircle className="w-3.5 h-3.5 mr-1.5" />
               Buat Materi
             </Button>
           </Link>
           <Link href="/guru/tugas">
-            <Button variant="outline" size="sm" className="bg-emerald-700/50 border-white/30 text-white hover:bg-emerald-700">
-              <CheckSquare className="w-3.5 h-3.5 mr-1" />
+            <Button variant="outline" size="sm" className="bg-slate-800/80 border-slate-700 text-slate-200 hover:bg-slate-700 hover:text-white">
+              <CheckSquare className="w-3.5 h-3.5 mr-1.5" />
               Buat Tugas
             </Button>
           </Link>

@@ -144,7 +144,12 @@ export const DataRepository = {
 
   // 2. Sekolah & Tahun Ajaran
   getSchool(): School {
-    return getStorage<School>("school", initialSchool);
+    const current = getStorage<School>("school", initialSchool);
+    if (!current || !current.name || current.name.includes("Harapan Bangsa")) {
+      setStorage("school", initialSchool);
+      return initialSchool;
+    }
+    return current;
   },
 
   updateSchool(updates: Partial<School>): School {

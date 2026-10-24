@@ -9,7 +9,6 @@ import {
   Menu,
   Bell,
   Search,
-  Sparkles,
   UserCheck,
 } from "lucide-react";
 
@@ -78,17 +77,21 @@ export function Header({
 
       {/* Right: Role Switcher Demo Pill + Notifications + Profile */}
       <div className="flex items-center gap-2 sm:gap-3">
-        {/* Fast Role Switcher for Developer / Evaluator Testing */}
+        {/* Academic Year Chip */}
+        <span className="hidden xl:inline-flex items-center px-2.5 py-1 rounded-lg bg-slate-100 border border-slate-200 text-[11px] font-semibold text-slate-600">
+          TA 2026/2027 (Ganjil)
+        </span>
+
+        {/* Fast Role Switcher */}
         <div className="hidden sm:flex items-center gap-1 p-1 rounded-xl bg-slate-100 border border-slate-200 text-xs font-semibold">
-          <span className="px-2 text-[10px] text-slate-400 uppercase font-bold flex items-center gap-1">
-            <Sparkles className="w-3 h-3 text-amber-500" />
-            Role:
+          <span className="px-2 text-[10px] text-slate-500 uppercase font-bold tracking-wider">
+            Peran:
           </span>
           <button
             onClick={() => handleSwitchRole("admin")}
-            className={`px-2.5 py-1 rounded-lg transition-all cursor-pointer ${
+            className={`px-2.5 py-1 rounded-lg transition-all cursor-pointer text-xs font-medium ${
               currentUser.role === "admin"
-                ? "bg-purple-600 text-white shadow-xs"
+                ? "bg-slate-900 text-white shadow-xs"
                 : "text-slate-600 hover:bg-slate-200/70"
             }`}
           >
@@ -96,9 +99,9 @@ export function Header({
           </button>
           <button
             onClick={() => handleSwitchRole("guru")}
-            className={`px-2.5 py-1 rounded-lg transition-all cursor-pointer ${
+            className={`px-2.5 py-1 rounded-lg transition-all cursor-pointer text-xs font-medium ${
               currentUser.role === "guru"
-                ? "bg-emerald-600 text-white shadow-xs"
+                ? "bg-emerald-700 text-white shadow-xs"
                 : "text-slate-600 hover:bg-slate-200/70"
             }`}
           >
@@ -106,7 +109,7 @@ export function Header({
           </button>
           <button
             onClick={() => handleSwitchRole("siswa")}
-            className={`px-2.5 py-1 rounded-lg transition-all cursor-pointer ${
+            className={`px-2.5 py-1 rounded-lg transition-all cursor-pointer text-xs font-medium ${
               currentUser.role === "siswa"
                 ? "bg-blue-600 text-white shadow-xs"
                 : "text-slate-600 hover:bg-slate-200/70"

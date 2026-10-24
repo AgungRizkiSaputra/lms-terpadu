@@ -17,14 +17,14 @@ import {
 
 export const initialSchool: School = {
   id: "11111111-1111-1111-1111-111111111111",
-  name: "SMA Negeri 1 Harapan Bangsa",
-  npsn: "20104567",
+  name: "SMA Cendekia Nusantara",
+  npsn: "99281726",
   level: "SMA",
   logo_url: "https://images.unsplash.com/photo-1592280771190-3e2e4d571952?w=150&auto=format&fit=crop&q=80",
-  address: "Jl. Pendidikan No. 45, Kebayoran Baru, Jakarta Selatan",
-  phone: "(021) 7890123",
-  email: "info@sman1harapanbangsa.sch.id",
-  website: "https://sman1harapanbangsa.sch.id",
+  address: "Jl. Cendekia Terpadu No. 101, Kompleks Pendidikan Mandiri, Nusantara",
+  phone: "(021) 789-0123",
+  email: "info@cendekianusantara.sch.id",
+  website: "https://cendekianusantara.sch.id",
 };
 
 export const initialAcademicYear: AcademicYear = {
@@ -47,7 +47,7 @@ export const initialProfiles: Profile[] = [
     school_id: initialSchool.id,
     nip_nisn: "197805122002121001",
     phone: "081234567890",
-    bio: "Kepala Bagian Akademik & Administrator Sistem LMS SMA Negeri 1 Harapan Bangsa.",
+    bio: "Kepala Bagian Akademik & Administrator Sistem LMS Terpadu SMA Cendekia Nusantara.",
     is_active: true,
   },
   {

@@ -133,18 +133,24 @@ export function Sidebar({ currentUser, isOpen, onClose, onLogout }: SidebarProps
         )}
       >
         {/* Brand Header */}
-        <div className="h-16 flex items-center gap-3 px-5 border-b border-slate-100 bg-linear-to-r from-blue-50/50 to-indigo-50/30">
-          <div className="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center shadow-md shadow-blue-500/20 font-bold text-lg">
-            <SchoolIcon className="w-5 h-5" />
+        <Link
+          href="/"
+          className="h-16 flex items-center gap-3 px-4 border-b border-slate-200/80 hover:bg-slate-50 transition-colors group"
+          title="Kembali ke Halaman Beranda"
+        >
+          <div className="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-lg group-hover:bg-blue-600 transition-colors">
+            <SchoolIcon className="w-5 h-5 text-blue-400 group-hover:text-white transition-colors" />
           </div>
           <div className="flex-1 min-w-0">
-            <h1 className="text-sm font-bold text-slate-900 truncate">LMS Pintar</h1>
-            <p className="text-[11px] font-medium text-blue-600 flex items-center gap-1">
-              <Sparkles className="w-3 h-3" />
-              Portal Terpadu
+            <h1 className="text-xs font-bold text-slate-900 truncate tracking-tight">
+              SMA Cendekia Nusantara
+            </h1>
+            <p className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider flex items-center gap-1.5 mt-0.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+              LMS Terpadu
             </p>
           </div>
-        </div>
+        </Link>
 
         {/* Current User Card */}
         <div className="p-3 mx-3 mt-3 rounded-xl bg-slate-50 border border-slate-200/60 flex items-center gap-2.5">

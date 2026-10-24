@@ -67,30 +67,35 @@ export default function AdminDashboardPage() {
       subtitle="Ringkasan eksekutif statistik akademik dan operasional LMS terintegrasi"
     >
       {/* Top Banner Announcement Alert */}
-      <div className="rounded-2xl bg-linear-to-r from-blue-600 via-indigo-600 to-indigo-700 p-6 text-white shadow-lg shadow-blue-500/15 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="rounded-2xl bg-slate-900 border border-slate-800 p-6 text-white shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-5">
         <div>
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 text-white text-[11px] font-bold backdrop-blur-md mb-2">
-            <TrendingUp className="w-3.5 h-3.5" />
-            Tahun Ajaran 2026/2027 (Semester Ganjil) Aktif
-          </span>
-          <h2 className="text-xl font-extrabold tracking-tight">
-            Selamat Datang di Portal Manajemen Akademik
+          <div className="flex flex-wrap items-center gap-2 mb-2.5">
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700/80 text-emerald-400 text-[11px] font-semibold">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              Tahun Ajaran 2026/2027 • Semester Ganjil
+            </span>
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-blue-950 text-blue-300 border border-blue-800/60">
+              Kurikulum Merdeka
+            </span>
+          </div>
+          <h2 className="text-xl font-bold tracking-tight text-white">
+            Pusat Kendali Akademik Sekolah
           </h2>
-          <p className="text-xs text-blue-100 mt-1 max-w-xl leading-relaxed">
-            Semua modul pembelajaran digital untuk jenjang SMP, SMA, dan SMK terhubung langsung dengan sistem database dan otorisasi terpusat.
+          <p className="text-xs text-slate-300 mt-1 max-w-xl leading-relaxed">
+            Kelola operasional rombongan belajar, data pendidik & peserta didik, distribusi modul pembelajaran, serta evaluasi ujian CBT terpusat.
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2.5 shrink-0">
           <Link href="/admin/pengguna">
-            <Button variant="secondary" size="sm" className="bg-white text-blue-700 hover:bg-blue-50">
-              <UserPlus className="w-3.5 h-3.5 mr-1" />
+            <Button size="sm" className="bg-white text-slate-900 hover:bg-slate-100 font-semibold shadow-xs">
+              <UserPlus className="w-3.5 h-3.5 mr-1.5" />
               Tambah Pengguna
             </Button>
           </Link>
           <Link href="/admin/pengumuman">
-            <Button variant="outline" size="sm" className="bg-blue-700/50 border-white/30 text-white hover:bg-blue-700">
-              <Megaphone className="w-3.5 h-3.5 mr-1" />
+            <Button variant="outline" size="sm" className="bg-slate-800/80 border-slate-700 text-slate-200 hover:bg-slate-700 hover:text-white">
+              <Megaphone className="w-3.5 h-3.5 mr-1.5" />
               Buat Pengumuman
             </Button>
           </Link>
